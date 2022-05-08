@@ -77,8 +77,9 @@ export default function Expenditure() {
         const response = await axios.get(
           "https://money-management-3.herokuapp.com/expenditure"
         );
+        const data = response.data
         setData(response.data);
-        setFilteredData(response.data);
+        setFilteredData(data);
       } catch (error) {
         console.error(error);
       }
@@ -97,7 +98,7 @@ export default function Expenditure() {
     );
 
     if (dateString >= twelveHoursBack) {
-      const response = await axios.delete(
+      await axios.delete(
         `https://money-management-3.herokuapp.com/expenditure/delete/${_id}`
       );
 
@@ -137,7 +138,7 @@ export default function Expenditure() {
     if (body.amount > 0) {
       body.amount = body.amount * -1;
     }
-    const res = await axios.put(
+    await axios.put(
       `https://money-management-3.herokuapp.com/expenditure/update/${_id}`,
       body
     );

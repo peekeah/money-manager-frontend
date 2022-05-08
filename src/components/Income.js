@@ -74,7 +74,7 @@ function Income() {
     );
 
     if (dateString >= twelveHoursBack) {
-      const response = await axios.delete(
+      await axios.delete(
         `https://money-management-3.herokuapp.com/income/delete/${_id}`
       );
 

@@ -41,7 +41,7 @@ export default function AddIncome() {
     formDataCopy.date = new Date().toISOString();
     setFormData(formDataCopy);
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://money-management-3.herokuapp.com/income/create",
         formDataCopy
       );
@@ -90,7 +90,7 @@ export default function AddIncome() {
                   />
                 </div>
               </div>
-              
+
               <div className="d-flex justify-content-center mt-4">
                 <button className="btn btn-success" type="submit">
                   Add Income

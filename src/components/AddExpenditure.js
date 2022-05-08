@@ -66,7 +66,7 @@ export default function Dashboard() {
     formDataCopy.amount = formDataCopy.amount * -1;
     setFormData(formDataCopy);
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://money-management-3.herokuapp.com/expenditure/create",
         formDataCopy
       );
@@ -80,7 +80,6 @@ export default function Dashboard() {
       category: "Entertainment",
       description: "",
       source: "Chase Debit Card",
-      posting_date: "",
     });
   };
 

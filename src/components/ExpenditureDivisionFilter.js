@@ -80,7 +80,7 @@ function ExpenditureDivisionFilter({ data, filteredData, setFilteredData }) {
   };
 
   const handlePersonalCheck = (e) => {
-    const { name, checked } = e.target;
+    const { name } = e.target;
 
     let personalCheckCopy = [...personalDivisionCheck];
     const index = Object.values(personalCheckCopy).findIndex(
@@ -94,7 +94,7 @@ function ExpenditureDivisionFilter({ data, filteredData, setFilteredData }) {
   };
 
   const handleWorkCheck = (e) => {
-    const { name, checked } = e.target;
+    const { name } = e.target;
 
     let workCheckCopy = [...workDivCheck];
     const index = Object.values(workCheckCopy).findIndex(

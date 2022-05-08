@@ -131,7 +131,8 @@ export default function Expenditure() {
     }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     handleModalClose();
 
     const { _id, ...body } = formData;

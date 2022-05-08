@@ -107,7 +107,8 @@ function Income() {
     }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     handleModalClose();
     const { _id, ...body } = formData;
     await axios.put(

@@ -82,7 +82,7 @@ export default function AddIncome() {
                 <div className="col-sm-8">
                   <input
                     type="number"
-                    className="form-control-plaintext"
+                    className="form-control"
                     value={formData.amount}
                     name="amount"
                     onChange={handleChange}
